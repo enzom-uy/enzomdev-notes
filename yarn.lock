@@ -1009,6 +1009,11 @@ astro-eslint-parser@^0.9.0:
     eslint-visitor-keys "^3.0.0"
     espree "^9.0.0"
 
+astro-feather-icons@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/astro-feather-icons/-/astro-feather-icons-1.0.2.tgz#903cd2fee26d5cafa9145d75157525df506d4936"
+  integrity sha512-3goz21oOAdMtISBRUvVvNY2V9WcOo67FH+US/G7BUfhLlmhVE8bBpNYRrc+v5dloGCQIzXlKryWNDZLapaHmlw==
+
 astro@^1.9.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/astro/-/astro-1.9.1.tgz#77b4786da633e1b9b579299db54c28eb6bb33de2"
