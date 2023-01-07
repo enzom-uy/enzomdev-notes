@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .header-icon {
+    @apply h-5 w-fit;
+  }
+}

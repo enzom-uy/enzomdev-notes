@@ -1,13 +1,15 @@
 ---
 import ThemeToggler from './ThemeToggler.astro'
+import SearchIcon from './SearchIcon.astro'
 ---
 
 <header class="mb-4 border-b-[1px] border-b-gray-800 border-opacity-40 py-4">
   <nav>
-    <ul class="flex justify-center gap-8">
+    <ul class="flex items-center justify-center gap-8">
       <li><a href="/">Inicio</a></li>
       <li><a href="/utec">UTEC</a></li>
       <li><a href="/coding">Coding</a></li>
+      <li class="flex items-center"><SearchIcon /></li>
       <li><ThemeToggler /></li>
     </ul>
   </nav>
