@@ -18,3 +18,4 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+.temp.1673116256318.config.mjs
