@@ -33,7 +33,6 @@ export default defineConfig({
     ]
   },
   site: 'https://enzomdev-apuntes.github.io',
-  base: '/enzomdev-notes',
   output: 'server',
   adapter: vercel()
 })
