@@ -6,10 +6,6 @@ const { pathname } = Astro.url
 
 const links = [
   {
-    name: 'Inicio',
-    href: '/'
-  },
-  {
     name: 'UTEC',
     href: '/utec'
   },
@@ -28,13 +24,21 @@ const links = [
       class="flex flex-col items-center justify-center gap-8 min-[400px]:flex-row sm:justify-between"
     >
       <div class="flex items-center gap-8">
+        <li>
+          <a
+            href="/"
+            class={pathname === '/'
+              ? 'cursor-pointer text-cyan-900 dark:text-cyan-700'
+              : null}>Inicio</a
+          >
+        </li>
         {
           links.map((l) => (
             <li>
               <a
                 href={l.href === pathname ? null : l.href}
                 class={`${
-                  l.href === pathname &&
+                  pathname.includes(l.href.slice(1)) &&
                   'cursor-pointer text-cyan-900 dark:text-cyan-700'
                 }`}
               >
