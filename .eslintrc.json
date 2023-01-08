@@ -3,12 +3,12 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:astro/recommended", "standard-with-typescript"],
+  "extends": ["standard-with-typescript", "plugin:astro/recommended"],
+  "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": "./tsconfig.json"
+    "sourceType": "module"
   },
-  "plugins": ["react", "astro"],
+  "plugins": ["react"],
   "rules": {}
 }
