@@ -18,7 +18,7 @@ const { title } = Astro.props
     <title>{title}</title>
   </head>
   <body
-    class="flex flex-col items-center bg-slate-300 px-4 transition-all duration-300 dark:bg-zinc-900 md:px-0"
+    class="flex flex-col items-center bg-slate-300 px-4 transition-all duration-300 dark:bg-zinc-900 dark:text-zinc-200 md:px-0"
   >
     <main class="max-w-3xl">
       <Header />
@@ -35,12 +35,5 @@ const { title } = Astro.props
       #da62c4 30%,
       white 60%
     );
-  }
-  html {
-    font-family: 'M PLUS Rounded 1c', system-ui, sans-serif;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   }
 </style>

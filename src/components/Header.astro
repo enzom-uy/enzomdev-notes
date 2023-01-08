@@ -1,16 +1,54 @@
 ---
 import ThemeToggler from './ThemeToggler.astro'
 import SearchIcon from './SearchIcon.astro'
+
+const { pathname } = Astro.url
+console.log(pathname)
+
+const links = [
+  {
+    name: 'Inicio',
+    href: '/'
+  },
+  {
+    name: 'Utec',
+    href: '/utec'
+  },
+  {
+    name: 'Coding',
+    href: '/coding'
+  }
+]
 ---
 
-<header class="mb-4 border-b-[1px] border-b-gray-800 border-opacity-40 py-4">
+<header
+  class="text-extrabold mb-4 border-b-[1px] border-b-gray-800 border-opacity-40 py-4"
+>
   <nav>
-    <ul class="flex items-center justify-center gap-8">
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/utec">UTEC</a></li>
-      <li><a href="/coding">Coding</a></li>
-      <li class="flex items-center"><SearchIcon /></li>
-      <li><ThemeToggler /></li>
+    <ul
+      class="flex flex-col items-center justify-center gap-8 min-[400px]:flex-row"
+    >
+      <div class="flex items-center gap-8">
+        {
+          links.map((l) => (
+            <li>
+              <a
+                href={l.href === pathname ? null : l.href}
+                class={`${
+                  l.href === pathname &&
+                  'cursor-pointer text-cyan-900 dark:text-cyan-700'
+                }`}
+              >
+                {l.name}
+              </a>
+            </li>
+          ))
+        }
+      </div>
+      <div class="flex items-center gap-8">
+        <li class="flex items-center hover:text-cyan-700"><SearchIcon /></li>
+        <li class="hover:text-cyan-700"><ThemeToggler /></li>
+      </div>
     </ul>
   </nav>
 </header>
