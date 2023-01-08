@@ -6,6 +6,7 @@ const posts = await Astro.glob('./**/*.md')
 ---
 
 <Layout title="Inicio">
+  <h1 class="mb-4 text-2xl">Todos mis apuntes.</h1>
   <PostsList posts={posts} />
 </Layout>
 <Tailwind />
