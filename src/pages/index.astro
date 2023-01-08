@@ -1,18 +1,11 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+const posts = await Astro.glob('./**/*.md')
+console.log(posts)
 ---
 
 <Layout title="Welcome to Astro.">
-  <h1 class="text-[1em]">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sequi vero
-    deserunt numquam voluptatibus ut eum, minus minima, optio rerum dicta
-    eligendi! Suscipit nulla quidem perspiciatis magnam facere alias explicabo
-    reiciendis cum maxime ullam, ab officia quaerat, ea nemo iusto eaque ipsum
-    nihil eius perferendis iste rem minima corporis? Earum ducimus vero quaerat
-    sequi perspiciatis fugiat nostrum corporis necessitatibus sunt nisi
-    possimus, aspernatur porro minus cum ratione a eum incidunt iusto debitis
-    est quae placeat ipsa quo eos. Fugiat voluptatibus odit animi ipsam. Beatae
-    repellendus autem nisi quia sed recusandae iusto ratione corporis laborum!
-    Facilis facere asperiores eligendi? Neque, qui.
-  </h1>
+  <ul>
+    {posts.map((p) => <li>{p.frontmatter.title}</li>)}
+  </ul>
 </Layout>

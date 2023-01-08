@@ -9,14 +9,6 @@ code {
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-a:hover {
-  color: #164e63;
-}
-
-:global('dark') a:hover {
-  color: #0e7490;
-}
-
 @layer components {
   .header-icon {
     @apply h-5 w-fit;
@@ -24,7 +16,7 @@ a:hover {
 }
 
 @layer base {
-  a {
+  header a {
     @apply hover:text-cyan-900 dark:hover:text-cyan-700;
   }
 }
