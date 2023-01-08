@@ -23,7 +23,7 @@ code {
     @apply text-xs opacity-60;
   }
   .card-title {
-    @apply font-bold text-cyan-900 dark:text-cyan-700;
+    @apply font-bold text-cyan-900 dark:text-cyan-700 text-xl;
   }
 }
 
