@@ -64,5 +64,3 @@ Las SPA son una arquitectura superior para páginas que tienen que lidiar con
 manejos de estado multi-página complejos, ya que se ejecutan como una aplicación
 completa de Javascript, lo que les permite mantener el estado y memoria
 a través de múltiples páginas.
-
-**Next file:** [Astro Islands](./astro-islands.md)
