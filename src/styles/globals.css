@@ -13,10 +13,24 @@ code {
   .header-icon {
     @apply h-5 w-fit;
   }
+  .date {
+    @apply text-xs;
+  }
+  .card-title {
+    @apply text-cyan-900 dark:text-cyan-700;
+  }
 }
 
 @layer base {
   header a {
     @apply hover:text-cyan-900 dark:hover:text-cyan-700;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-cyan-900 dark:text-cyan-700;
   }
 }
