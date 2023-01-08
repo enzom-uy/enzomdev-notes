@@ -29,7 +29,7 @@ export default defineConfig({
       ]
     ]
   },
-  // site: 'https://enzomdev-apuntes.github.io',
-  // base: '/enzomdev-notes',
+  site: 'https://enzomdev-apuntes.github.io',
+  base: '/enzomdev-notes',
   output: 'static'
 })
