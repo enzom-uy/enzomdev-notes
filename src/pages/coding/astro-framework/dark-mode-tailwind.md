@@ -82,3 +82,31 @@ de cambiar el tema, por ejemplo `ThemeToggler.astro`.
     .addEventListener('click', handleToggleClick)
 </script>
 ```
+
+## Prevenir el flasheo inicial
+
+Con solamente haber implementado el código anterior basta para tener un theme toggler,
+pero al recargar la página o visitar otros links va a haber un flasheo inicial del tema claro.
+
+Para solucionarlo hay que agregar el siguiente código al Layout (antes de empezar el HTML o dentro del <head></head>):
+
+```typescript
+<script is:inline>
+  const userTheme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark'
+    }
+    return 'light'
+  })()
+
+  if (userTheme === 'light') {
+    document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
+  }
+  window.localStorage.setItem('theme', userTheme)
+</script>
+```
