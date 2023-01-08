@@ -17,19 +17,6 @@ Modificar el archivo de configuración de `Tailwind` para agregarle la propiedad
 Usar un `<script>` de Astro en nuestro componente encargado
 de cambiar el tema, por ejemplo `ThemeToggler.astro`.
 
-| Column1   | Column2    |
-|--------------- | --------------- |
-| Item1.1   | Item2.1   |
-| Item1.2   | Item2.2   |
-
-```mermaid
-graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
-```
-
 ```astro
 <div id="themeToggle">
   <svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
