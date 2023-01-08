@@ -1,9 +1,11 @@
 ---
 import PostsList from '@/components/PostsList.astro'
+import Tailwind from '@/components/tailwind.astro'
 import Layout from '@/layouts/Layout.astro'
 const posts = await Astro.glob('./**/*.md')
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Inicio">
   <PostsList posts={posts} />
 </Layout>
+<Tailwind />

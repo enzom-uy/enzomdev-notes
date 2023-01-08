@@ -1,8 +1,8 @@
 ---
-layout: ../../../layouts/Layout.astro
-title: Páginas de Astro con markdown
-description: Cómo crear páginas en nuestras rutas de Astro usando archivos Markdown.
-date: "08-01-2023"
+layout: ../../../layouts/PostLayout.astro
+title: Páginas de Markdown
+description: Cómo crear páginas en una página con Astro usando archivos Markdown.
+date: 01/08/2023
 ---
 
 # Markdown pages

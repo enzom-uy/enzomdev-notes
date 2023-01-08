@@ -1,8 +1,8 @@
 ---
-layout: ../../../layouts/Layout.astro
 title: Qué es Astro
-description: Vistazo general al web framework Astro.
-date: "08-01-2023"
+description: Información general del web framework Astro.
+layout: ../../../layouts/PostLayout.astro
+date: 01/08/2023
 ---
 
 # Astro web framework

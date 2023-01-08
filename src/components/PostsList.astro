@@ -17,7 +17,7 @@ const { posts } = Astro.props
           title={frontmatter.title}
           description={frontmatter.description}
           date={frontmatter.date}
-          href={url}
+          href={url as string}
         />
       </li>
     ))

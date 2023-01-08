@@ -2,10 +2,11 @@
 import Header from '@/components/Header.astro'
 import '@/styles/globals.css'
 import '@fontsource/m-plus-rounded-1c'
-import '@fontsource/m-plus-rounded-1c/800.css'
-import '@fontsource/m-plus-rounded-1c/700.css'
-import '@fontsource/m-plus-rounded-1c/500.css'
 import '@fontsource/m-plus-rounded-1c/300.css'
+import '@fontsource/m-plus-rounded-1c/500.css'
+import '@fontsource/m-plus-rounded-1c/700.css'
+import '@fontsource/m-plus-rounded-1c/800.css'
+
 export interface Props {
   title: string
 }
@@ -13,13 +14,18 @@ export interface Props {
 const { title } = Astro.props
 ---
 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{title} - Enzomdev Apuntes</title>
+    <meta
+      name="description"
+      content="Blog hecho con Astro para publicar mis apuntes personales."
+    />
     <script is:inline>
       const userTheme = (() => {
         if (

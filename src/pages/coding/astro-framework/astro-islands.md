@@ -1,8 +1,8 @@
 ---
-layout: ../../../layouts/Layout.astro
 title: Astro Islands
 description: Qué son las Astro Islands y cómo funcionan.
-date: "08-01-2023"
+date: 01/08/2023
+layout: ../../../layouts/PostLayout.astro
 ---
 
 # Astro Islands

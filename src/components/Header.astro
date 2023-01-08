@@ -1,9 +1,8 @@
 ---
-import ThemeToggler from './ThemeToggler.astro'
 import SearchIcon from './SearchIcon.astro'
+import ThemeToggler from './ThemeToggler.astro'
 
 const { pathname } = Astro.url
-console.log(pathname)
 
 const links = [
   {
@@ -22,7 +21,7 @@ const links = [
 ---
 
 <header
-  class="text-extrabold mb-4 w-full max-w-3xl border-b-[1px] border-b-gray-800 border-opacity-40 py-4"
+  class="mb-4 w-full max-w-3xl border-b-[1px] border-b-gray-800 border-opacity-40 py-4 font-bold"
 >
   <nav>
     <ul

@@ -1,8 +1,8 @@
 ---
-layout: ../../../layouts/Layout.astro
+layout: ../../../layouts/PostLayout.astro
 title: Dark mode en Astro con Tailwind y React
 description: Cómo implementar modo oscuro en Astro con Tailwind y React.
-date: "08-01-2023"
+date: 01/08/2023
 ---
 
 # Dark mode en Astro con Tailwind y React
@@ -17,10 +17,20 @@ Modificar el archivo de configuración de `Tailwind` para agregarle la propiedad
 Usar un `<script>` de Astro en nuestro componente encargado
 de cambiar el tema, por ejemplo `ThemeToggler.astro`.
 
-```astro
----
----
+| Column1   | Column2    |
+|--------------- | --------------- |
+| Item1.1   | Item2.1   |
+| Item1.2   | Item2.2   |
 
+```mermaid
+graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
+
+```astro
 <div id="themeToggle">
   <svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path
@@ -80,33 +90,5 @@ de cambiar el tema, por ejemplo `ThemeToggler.astro`.
   document
     .getElementById('themeToggle')
     .addEventListener('click', handleToggleClick)
-</script>
-```
-
-## Prevenir el flasheo inicial
-
-Con solamente haber implementado el código anterior basta para tener un theme toggler,
-pero al recargar la página o visitar otros links va a haber un flasheo inicial del tema claro.
-
-Para solucionarlo hay que agregar el siguiente código al Layout (antes de empezar el HTML o dentro del <head></head>):
-
-```typescript
-<script is:inline>
-  const userTheme = (() => {
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-      return localStorage.getItem('theme')
-    }
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark'
-    }
-    return 'light'
-  })()
-
-  if (userTheme === 'light') {
-    document.documentElement.classList.remove('dark')
-  } else {
-    document.documentElement.classList.add('dark')
-  }
-  window.localStorage.setItem('theme', userTheme)
 </script>
 ```

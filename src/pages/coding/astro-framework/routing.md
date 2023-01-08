@@ -1,8 +1,8 @@
 ---
-layout: ../../../layouts/Layout.astro
 title: Routing en Astro
-description: Cómo funciona el routing en Astro Framework.
-date: "08-01-2023"
+description: Cómo funciona el routing en Astro.
+layout: ../../../layouts/PostLayout.astro
+date: 01/08/2023
 ---
 
 # Routing

@@ -1,8 +1,8 @@
 ---
-layout: ../../../layouts/Layout.astro
-title: Estructura de archivos en Astro
-description: Revisando la lógica de la estructura de archivos de un proyecto en Astro.
-date: "08-01-2023"
+layout: ../../../layouts/PostLayout.astro
+title: Estructura de archivos
+description: Vista general a la estructura de archivos de un proyecto con Astro.
+date: 01/08/2023
 ---
 
 # Estructura del proyecto

@@ -1,7 +1,3 @@
----
-layout: ../../../layouts/Layout.astro
----
-
 # Nanostores
 
 <!--toc:start-->

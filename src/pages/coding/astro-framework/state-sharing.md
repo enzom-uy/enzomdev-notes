@@ -1,8 +1,8 @@
 ---
-layout: ../../../layouts/Layout.astro
-title: Compartiendo el estado en Astro
-description: Cómo compartir el estado en nuestra página usando Astro.
-date: "08-01-2023"
+title: Compartiendo estado
+description: Cómo manejar el estado en una página de Astro.
+date: 01/08/2023
+layout: ../../../layouts/PostLayout.astro
 ---
 
 # State Sharing
