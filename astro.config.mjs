@@ -5,6 +5,9 @@ import tailwind from '@astrojs/tailwind'
 import addClasses from 'rehype-add-classes'
 
 // https://astro.build/config
+import vercel from '@astrojs/vercel/serverless'
+
+// https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
   markdown: {
@@ -31,5 +34,6 @@ export default defineConfig({
   },
   site: 'https://enzomdev-apuntes.github.io',
   base: '/enzomdev-notes',
-  output: 'static'
+  output: 'server',
+  adapter: vercel()
 })
