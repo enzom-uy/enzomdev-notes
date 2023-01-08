@@ -2,15 +2,22 @@
 import { Sun, Moon } from 'astro-feather-icons'
 ---
 
-<button id="themeToggle" class="flex items-center justify-center">
+<button
+  id="themeToggle"
+  class="flex items-center justify-center"
+  aria-label="Toggle site theme"
+>
   <span class="dark:hidden"><Sun class="header-icon" /></span>
   <span class="hidden dark:flex"><Moon class="header-icon" /></span>
 </button>
 
 <script is:inline>
   const theme = (() => {
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-      return localStorage.getItem('theme')
+    if (
+      typeof window.localStorage !== 'undefined' &&
+      window.localStorage.getItem('theme')
+    ) {
+      return window.localStorage.getItem('theme')
     }
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark'
@@ -29,7 +36,7 @@ import { Sun, Moon } from 'astro-feather-icons'
     element.classList.toggle('dark')
 
     const isDark = element.classList.contains('dark')
-    localStorage.setItem('theme', isDark ? 'dark' : 'light')
+    window.localStorage.setItem('theme', isDark ? 'dark' : 'light')
   }
 
   document
