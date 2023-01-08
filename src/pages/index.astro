@@ -1,11 +1,9 @@
 ---
+import PostsList from '@/components/PostsList.astro'
 import Layout from '@/layouts/Layout.astro'
 const posts = await Astro.glob('./**/*.md')
-console.log(posts)
 ---
 
 <Layout title="Welcome to Astro.">
-  <ul>
-    {posts.map((p) => <li>{p.frontmatter.title}</li>)}
-  </ul>
+  <PostsList posts={posts} />
 </Layout>

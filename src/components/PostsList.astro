@@ -1,0 +1,25 @@
+---
+import type { MarkdownInstance } from 'astro'
+import PostCard from './PostCard.astro'
+
+export interface Props {
+  posts: MarkdownInstance<Record<string, any>>[]
+}
+
+const { posts } = Astro.props
+---
+
+<ul class="flex flex-col gap-4">
+  {
+    posts.map(({ frontmatter, url }) => (
+      <li>
+        <PostCard
+          title={frontmatter.title}
+          description={frontmatter.description}
+          date={frontmatter.date}
+          href={url}
+        />
+      </li>
+    ))
+  }
+</ul>

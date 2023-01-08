@@ -1,0 +1,17 @@
+---
+export interface Props {
+  title: string
+  date: string
+  description: string
+  href: string
+}
+const { title, date, description, href } = Astro.props
+---
+
+<div class="flex flex-col">
+  <div class="flex flex-col">
+    <a class="card-title" href={href}>{title}</a>
+    <span class="date">{date}</span>
+  </div>
+  <p>{description}</p>
+</div>
