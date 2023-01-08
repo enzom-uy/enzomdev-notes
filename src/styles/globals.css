@@ -1,7 +1,30 @@
 @tailwind components;
+@tailwind base;
+
+html {
+  font-family: 'M PLUS Rounded 1c', system-ui, sans-serif;
+}
+code {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+a:hover {
+  color: #164e63;
+}
+
+:global('dark') a:hover {
+  color: #0e7490;
+}
 
 @layer components {
   .header-icon {
     @apply h-5 w-fit;
+  }
+}
+
+@layer base {
+  a {
+    @apply hover:text-cyan-900 dark:hover:text-cyan-700;
   }
 }

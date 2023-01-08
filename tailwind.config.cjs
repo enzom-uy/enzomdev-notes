@@ -5,7 +5,11 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   darkMode: 'class',
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        'dark-foreground': '#e4e4e7'
+      }
+    }
   },
   plugins: []
 }
