@@ -1,12 +1,19 @@
 ---
 import CategoryLayout from '@/layouts/CategoryLayout.astro'
-
-const semestres = [{ name: '1er semestre', href: '/utec/1er-semestre' }]
+import { semesters } from '@/variables/semesters'
 ---
 
 <CategoryLayout
   title="UTEC"
   heading="Apuntes de la UTEC - Universidad Tecnológica del Uruguay."
 >
-  {semestres.map((s) => <a href={s.href}>{s.name}</a>)}
+  <ul>
+    {
+      semesters.map((s) => (
+        <li>
+          <a href={`/utec/${s.name.replace(' ', '-')}`}>{s.name}</a>
+        </li>
+      ))
+    }
+  </ul>
 </CategoryLayout>

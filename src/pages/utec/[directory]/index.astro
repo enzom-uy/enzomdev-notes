@@ -1,0 +1,32 @@
+---
+import PostsList from '@/components/PostsList.astro'
+import CategoryLayout from '@/layouts/CategoryLayout.astro'
+import { semesters } from '@/variables/semesters'
+import type { GetStaticPaths } from 'astro'
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return semesters.map((s) => ({
+    params: { directory: s.name.replace(' ', '-') },
+    props: {
+      title: s.name
+    }
+  }))
+}
+
+export interface Props {
+  title: string
+}
+
+const { directory } = Astro.params
+const posts = await Astro.glob('../**/*.md')
+const filtered = posts.filter((post) => post.url?.includes(directory as string))
+
+const { title } = Astro.props
+---
+
+<CategoryLayout
+  title={title}
+  heading={`Apuntes del ${title} de UTEC Licenciatura en TI.`}
+>
+  <PostsList posts={filtered} />
+</CategoryLayout>
