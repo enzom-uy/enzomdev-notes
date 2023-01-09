@@ -26,6 +26,6 @@ const filtered = posts.filter((post) => post.url?.includes(directory as string))
 const { title } = Astro.props
 ---
 
-<CategoryLayout title={title}>
+<CategoryLayout title={title} heading={`Apuntes de ${title}.`}>
   <PostsList posts={filtered} />
 </CategoryLayout>

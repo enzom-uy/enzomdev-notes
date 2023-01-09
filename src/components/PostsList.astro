@@ -9,7 +9,7 @@ export interface Props {
 const { posts } = Astro.props
 ---
 
-<ul class="flex flex-col gap-4">
+<ul class="my-4 flex flex-col gap-4">
   {
     posts.map(({ frontmatter, url }) => (
       <li>
