@@ -1131,6 +1131,11 @@ astro-feather-icons@^1.0.2:
   resolved "https://registry.yarnpkg.com/astro-feather-icons/-/astro-feather-icons-1.0.2.tgz#903cd2fee26d5cafa9145d75157525df506d4936"
   integrity sha512-3goz21oOAdMtISBRUvVvNY2V9WcOo67FH+US/G7BUfhLlmhVE8bBpNYRrc+v5dloGCQIzXlKryWNDZLapaHmlw==
 
+astro-headless-ui@^0.0.22:
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/astro-headless-ui/-/astro-headless-ui-0.0.22.tgz#6a21753c4a71b719360a5f8b2b5fe16bf4da7bed"
+  integrity sha512-T9oq8yFo6MPHetdzjs7KdIwQm0a0/UDhZyeSus8f4hfjshUkD1kImxIXS++wpRRVkRoxAcnSmJBTdBPjDNsBTQ==
+
 astro-robots-txt@^0.3.10:
   version "0.3.10"
   resolved "https://registry.yarnpkg.com/astro-robots-txt/-/astro-robots-txt-0.3.10.tgz#a54323670ee5943487c4b2698502cf330e7d88aa"
