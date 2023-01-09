@@ -53,7 +53,7 @@ Astro te permite crear una ***isla***.
 ---
 import MyReactComponent from '../components/MyReactComponent.jsx'
 ---
-<!-- Este componente es ahora interactivo. El esto de la pgina
+<!-- Este componente es ahora interactivo. El esto de la página
      sigue siendo estática y sin Javascript -->
 <MyReactComponent client:load />
 ```
