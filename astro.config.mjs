@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config'
 // https://astro.build/config
 import tailwind from '@astrojs/tailwind'
 import addClasses from 'rehype-add-classes'
+import robotsTxt from 'astro-robots-txt'
 
 // https://astro.build/config
 import vercel from '@astrojs/vercel/static'
@@ -12,7 +13,7 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), sitemap()],
+  integrations: [tailwind(), sitemap(), robotsTxt()],
   markdown: {
     extendDefaultPlugins: true,
     rehypePlugins: [
