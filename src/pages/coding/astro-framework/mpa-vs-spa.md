@@ -2,7 +2,7 @@
 title: MPA vs SPA
 layout: ../../../layouts/PostLayout.astro
 description: Qué son y diferencias principales entre MPA y SPA.
-date: 01/08/2023
+date: 2023-01-09 18:16
 ---
 
 # MPA vs SPA

@@ -2,7 +2,7 @@
 title: Routing en Astro
 description: Cómo funciona el routing en Astro.
 layout: ../../../layouts/PostLayout.astro
-date: 01/08/2023
+date: 2023-01-09 18:16
 ---
 
 # Routing

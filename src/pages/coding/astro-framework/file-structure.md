@@ -2,7 +2,7 @@
 layout: ../../../layouts/PostLayout.astro
 title: Estructura de archivos
 description: Vista general a la estructura de archivos de un proyecto con Astro.
-date: 01/08/2023
+date: 2023-01-09 18:15
 ---
 
 # Estructura del proyecto

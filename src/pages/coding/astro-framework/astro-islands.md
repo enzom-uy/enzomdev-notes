@@ -1,7 +1,7 @@
 ---
 title: Astro Islands
 description: Qué son las Astro Islands y cómo funcionan.
-date: 01/08/2023
+date: 2023-01-09 18:15
 layout: ../../../layouts/PostLayout.astro
 ---
 

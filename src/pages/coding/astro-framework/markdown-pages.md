@@ -2,7 +2,7 @@
 layout: ../../../layouts/PostLayout.astro
 title: Páginas de Markdown
 description: Cómo crear páginas en una página con Astro usando archivos Markdown.
-date: 01/08/2023
+date: 2023-01-09 18:15
 ---
 
 # Markdown pages

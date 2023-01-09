@@ -1,7 +1,7 @@
 ---
 title: Compartiendo estado
 description: Cómo manejar el estado en una página de Astro.
-date: 01/08/2023
+date: 2023-01-09 18:16
 layout: ../../../layouts/PostLayout.astro
 ---
 

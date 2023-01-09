@@ -2,7 +2,7 @@
 layout: ../../../layouts/PostLayout.astro
 title: Dark mode en Astro con Tailwind y React
 description: Cómo implementar modo oscuro en Astro con Tailwind y React.
-date: 01/08/2023
+date: 2023-01-09 18:15
 ---
 
 # Dark mode en Astro con Tailwind y React

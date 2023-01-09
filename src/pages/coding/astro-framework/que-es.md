@@ -2,7 +2,7 @@
 title: Qué es Astro
 description: Información general del web framework Astro.
 layout: ../../../layouts/PostLayout.astro
-date: 01/08/2023
+date: 2023-01-09 18:16
 ---
 
 # Astro web framework
