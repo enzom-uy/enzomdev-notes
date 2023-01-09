@@ -23,13 +23,16 @@ code {
     @apply text-xs opacity-60;
   }
   .card-title {
-    @apply font-bold text-cyan-900 dark:text-cyan-700 text-xl;
+    @apply text-xl font-bold text-cyan-900 dark:text-cyan-700;
   }
 }
 
 @layer base {
   header a {
     @apply hover:text-cyan-900 dark:hover:text-cyan-700;
+  }
+  a {
+    @apply w-fit;
   }
   h1,
   h2,
