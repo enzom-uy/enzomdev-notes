@@ -13,6 +13,7 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://apuntesenzomdev.vercel.app',
   integrations: [tailwind(), sitemap(), robotsTxt()],
   markdown: {
     extendDefaultPlugins: true,
@@ -36,7 +37,6 @@ export default defineConfig({
       ]
     ]
   },
-  site: 'https://enzomdev-apuntes.vercel.app',
   output: 'static',
   adapter: vercel()
 })
