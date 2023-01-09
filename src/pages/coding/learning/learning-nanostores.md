@@ -1,3 +1,10 @@
+---
+title: Nanostores
+description: Entiendo cómo compartir el estado con Nanostores.
+date: 01/09/2023
+layout: ../../../layouts/PostLayout.astro
+---
+
 # Nanostores
 
 <!--toc:start-->
