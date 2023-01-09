@@ -1,10 +1,9 @@
 ---
 import PostsList from '@/components/PostsList.astro'
-import Layout from '@/layouts/Layout.astro'
+import CategoryLayout from '@/layouts/CategoryLayout.astro'
 const posts = await Astro.glob('./**/*.md')
 ---
 
-<Layout title="Coding">
-  <h1 class="mb-4 text-2xl">Apuntes de programación en general.</h1>
+<CategoryLayout title="Coding" heading="Apuntes de programación en general.">
   <PostsList posts={posts} />
-</Layout>
+</CategoryLayout>
