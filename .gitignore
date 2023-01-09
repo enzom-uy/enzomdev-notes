@@ -22,7 +22,9 @@ pnpm-debug.log*
 .temp.1673205330757.config.mjs
 .temp.1673212895911.config.mjs
 .vercel/output
-src/pages/utec/1er-semestre/redes/testing.md
-src/pages/utec/[directory]
 .temp.1673302469126.config.mjs
 .temp.1673302527523.config.mjs
+
+
+src/pages/utec/1er-semestre/redes/testing.md
+src/pages/utec/[directory]/index.astro
