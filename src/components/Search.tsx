@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import type { MarkdownInstance } from 'astro'
 import Fuse from 'fuse.js'
+import { FaSearch } from 'react-icons/fa'
 import PostCard from './PostCard'
 
 type Post = MarkdownInstance<Record<string, any>>
@@ -24,16 +25,19 @@ const Search: React.FC<Props> = ({ posts }) => {
   console.log(searchedPosts)
 
   return (
-    <div className="mt-4 flex flex-col gap-4">
-      <input
-        type="text"
-        placeholder="Nombre del post..."
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        className="dark:text-zinc-700 "
-      />
+    <div className="mt-4 flex w-full flex-col gap-4">
+      <div className="relative">
+        <input
+          type="text"
+          placeholder="Nombre del post"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          className="w-full border border-slate-800 bg-transparent py-4 pl-14 pr-4 font-semibold dark:border-zinc-700 dark:text-zinc-300"
+        />
+        <FaSearch className="absolute top-[1rem] left-[1rem] text-2xl opacity-70" />
+      </div>
       {searchedPosts && (
-        <ul>
+        <ul className="flex flex-col gap-2">
           {searchedPosts.map(({ item: { frontmatter, url } }) => (
             <li key={frontmatter.title}>
               <PostCard
@@ -48,7 +52,7 @@ const Search: React.FC<Props> = ({ posts }) => {
       )}
       {input !== '' && searchedPosts?.length === 0 && (
         <p className="text-lg">
-          No se encontraron posts relacionados a ${input}
+          No se encontraron posts relacionados a {input}
         </p>
       )}
     </div>
