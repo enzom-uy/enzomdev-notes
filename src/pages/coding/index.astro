@@ -1,9 +1,0 @@
----
-import PostsList from '@/components/PostsList.astro'
-import CategoryLayout from '@/layouts/CategoryLayout.astro'
-const posts = await Astro.glob('./**/*.md')
----
-
-<CategoryLayout title="Coding" heading="Apuntes de programación en general.">
-  <PostsList posts={posts} />
-</CategoryLayout>
