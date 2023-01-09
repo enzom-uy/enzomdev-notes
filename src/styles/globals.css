@@ -1,0 +1,45 @@
+@tailwind components;
+@tailwind base;
+
+html {
+  font-family: 'M PLUS Rounded 1c', system-ui, sans-serif;
+}
+
+pre {
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+code {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+@layer components {
+  .header-icon {
+    @apply h-5 w-fit;
+  }
+  .date {
+    @apply text-xs opacity-60;
+  }
+  .card-title {
+    @apply text-lg font-bold text-cyan-900 dark:text-cyan-700;
+  }
+}
+
+@layer base {
+  header a {
+    @apply hover:text-cyan-900 dark:hover:text-cyan-700;
+  }
+  a {
+    @apply w-fit;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-cyan-900 dark:text-cyan-700;
+  }
+}
