@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import type { MarkdownInstance } from 'astro'
 import Fuse from 'fuse.js'
-import { FaSearch } from 'react-icons/fa'
+import { FaSearch } from 'react-icons/fa/index'
 import PostCard from './PostCard'
 
 type Post = MarkdownInstance<Record<string, any>>
