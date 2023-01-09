@@ -35,7 +35,7 @@ export default defineConfig({
       ]
     ]
   },
-  site: 'https://enzomdev-apuntes.github.io',
-  output: 'static',
+  site: 'https://enzomdev-apuntes.vercel.app',
+  output: 'server',
   adapter: vercel()
 })
