@@ -1,0 +1,94 @@
+---
+import Footer from '@/components/Footer.astro'
+import Header from '@/components/Header.astro'
+import type { Url } from '@/interfaces/breadcrumbs'
+import '@/styles/globals.css'
+import '@fontsource/m-plus-rounded-1c'
+import '@fontsource/m-plus-rounded-1c/300.css'
+import '@fontsource/m-plus-rounded-1c/500.css'
+import '@fontsource/m-plus-rounded-1c/700.css'
+import '@fontsource/m-plus-rounded-1c/800.css'
+import { Breadcrumb } from 'astro-headless-ui'
+
+export interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="Blog hecho con Astro para publicar mis apuntes personales."
+    />
+    <script is:inline>
+      const userTheme = (() => {
+        if (
+          typeof localStorage !== 'undefined' &&
+          localStorage.getItem('theme')
+        ) {
+          return localStorage.getItem('theme')
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark'
+        }
+        return 'light'
+      })()
+
+      if (userTheme === 'light') {
+        document.documentElement.classList.remove('dark')
+      } else {
+        document.documentElement.classList.add('dark')
+      }
+      window.localStorage.setItem('theme', userTheme)
+    </script>
+  </head>
+
+  <body
+    class="flex min-h-screen flex-col items-center bg-slate-100 px-4 transition-all duration-300 dark:bg-zinc-900 dark:text-zinc-200 md:px-0"
+  >
+    <Header />
+
+    <main class="w-full max-w-3xl flex-grow">
+      <Breadcrumb index={Astro.url.pathname === '/' ? '' : 'Inicio'}>
+        {
+          (url: Url) => (
+            <>
+              <a href={url.href}>{url.text}</a>
+              <span> &gt; </span>
+            </>
+          )
+        }
+        <active slot="active"
+          >{
+            (url: Url) => (
+              <span class="text-cyan-900 dark:text-cyan-700">{url.text}</span>
+            )
+          }</active
+        >
+      </Breadcrumb>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #da62c4 30%,
+      white 60%
+    );
+  }
+</style>
