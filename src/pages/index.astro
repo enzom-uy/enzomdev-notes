@@ -2,11 +2,13 @@
 import PostsList from '@/components/PostsList.astro'
 import Tailwind from '@/components/tailwind.astro'
 import Layout from '@/layouts/Layout.astro'
+import { sortByDate } from '@/utils/sortByDate'
 const posts = await Astro.glob('./**/*.md')
+const sortedPosts = sortByDate(posts)
 ---
 
 <Layout title="Apuntes Enzomdev">
   <h1 class="mb-4 text-2xl">Todos mis apuntes.</h1>
-  <PostsList posts={posts} />
+  <PostsList posts={sortedPosts} />
 </Layout>
 <Tailwind />

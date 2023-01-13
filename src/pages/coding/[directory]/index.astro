@@ -1,6 +1,7 @@
 ---
 import PostsList from '@/components/PostsList.astro'
 import CategoryLayout from '@/layouts/CategoryLayout.astro'
+import { sortByDate } from '@/utils/sortByDate'
 import { categories } from '@/variables/categories'
 import type { GetStaticPaths } from 'astro'
 
@@ -20,12 +21,12 @@ export interface Props {
 const { directory } = Astro.params
 
 const posts = await Astro.glob('../**/*.md')
-
 const filtered = posts.filter((post) => post.url?.includes(directory as string))
+const sortedFilteredPosts = sortByDate(filtered)
 
 const { title } = Astro.props
 ---
 
 <CategoryLayout title={title} heading={`Apuntes de ${title}.`}>
-  <PostsList posts={filtered} />
+  <PostsList posts={sortedFilteredPosts} />
 </CategoryLayout>
