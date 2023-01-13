@@ -1,11 +1,9 @@
 ---
 import PostsList from '@/components/PostsList.astro'
 import CategoryLayout from '@/layouts/CategoryLayout.astro'
-import { sortByDate } from '@/utils/sortByDate'
 const posts = await Astro.glob('./**/*.md')
-const sortedPosts = sortByDate(posts)
 ---
 
 <CategoryLayout title="Coding" heading="Apuntes de programación en general.">
-  <PostsList posts={sortedPosts} />
+  <PostsList posts={posts} />
 </CategoryLayout>
