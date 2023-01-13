@@ -1,7 +1,7 @@
 ---
 title: Accesibilidad con A11Y
 description: Checklist de reglas fundamentales para accesibilidad de la comunidad a11y.
-date: 01/13/2023
+date: 2023-01-13 19:35
 layout: ../../../layouts/PostLayout.astro
 ---
 
