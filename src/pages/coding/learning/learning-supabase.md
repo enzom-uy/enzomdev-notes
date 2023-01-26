@@ -1,5 +1,5 @@
 ---
-title: Supabase: backend completo para mobile y web apps.
+title: Supabase, backend completo para mobile y web apps.
 description: Vistazo general a Supabase como solución FOSS a base de datos y backend.
 date: 2023-01-20 15:50
 layout: ../../../layouts/PostLayout.astro
