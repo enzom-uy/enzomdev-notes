@@ -11,7 +11,7 @@ import { semesters } from '@/variables/semesters'
     {
       semesters.map((s) => (
         <li>
-          <a href={`/utec/${s.name.replace(' ', '-')}`}>{s.name}</a>
+          <a href={`/utec/${s.slug}`}>{s.name}</a>
         </li>
       ))
     }
