@@ -37,6 +37,11 @@ layout: ../../../layouts/PostLayout.astro
     - Secretaría cuenta con 7 días a partir de la recepción del mail por parte del estudiante
       haciendo una solicitud completa y clara.
       - Se recomienda escribir un buen asunto de mail, con nombre y apellido.
+- Académico
+  - RGE: Reglamento General de Estudios.
+  - RCE: Reglamento de Convivencia Estudiantil.
+  - Plan de estudios.
+  - Circulares.
 
 ## Académico
 
